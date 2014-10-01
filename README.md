@@ -1,0 +1,4 @@
+mySite
+======
+
+My example page.
