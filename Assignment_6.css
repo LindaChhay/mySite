@@ -1,0 +1,144 @@
+/*
+File: ~lchhay/public_html/css/Assignment_6.css
+Created on October 18, 2014 at 3:00 PM
+Updated on October 25, 2014 at 1:50 PM
+Linda Chhay, lindarithchhay@gmail.com
+91.461 GUI Programming I
+UMass Lowell, Fall 2014
+Assignment 6: Creating an Interactive, Dynamic Table
+*/
+
+
+/* Making id selector as UMass Lowell logo */
+#UMassLogo { 
+	/* This UMass Lowell logo is from www.uml.edu */
+	background-image:
+		url('http://teaching.cs.uml.edu/~heines/images/uml_vertical_logo_098x118.jpg');
+	background-repeat: no-repeat;
+	background-size: 70px 90px;
+	padding: 10px;
+	margin: 10px 10px 10px 10px;
+	font-family: Julius Sans One, sans-serif;
+	font-size: 25pt;
+	font-weight: bold;
+	color: #000066;
+	text-align: center;
+}
+
+/* Set body id to the following properties and values below */
+#title {
+	background-color: #34a3c5;
+	max-width: 35%;
+	height: 100%;
+	border: #0d772b 5px solid;
+	margin: 0 auto 10px auto;
+	font-family: Julius Sans One, sans-serif;
+	padding: 15px;
+}
+
+/* Set content id to the following properties and values below */
+#content {
+	text-align: center;
+	color: #000000;
+	background-color: #33cc92;
+	border: #0d772b 5px solid;
+	max-width: 500px;
+	padding: 1px;
+	margin: auto auto 10px auto;
+}
+
+ /* apply the properties and values to my body of the whole page below */
+body {
+	background-color: #B8860B;
+	margin: 0;
+	font-family: "Julius Sans One, sans-serif";
+	font-size: 12pt;
+	letter-spacing: 1px;
+	color: #000000;
+}
+
+/* style user input field according to the properties and value below */ 
+#inputHolder {
+	background-color: #33cc92;
+	border: #808080 3px solid;
+	padding: 1px;
+	margin: auto auto auto auto;
+	max-width: 700px;
+	text-align: center;
+}
+
+#formbody {
+	max-width: 330px;
+	padding: 10px;
+	margin: 0 auto 0 auto;
+}
+
+#table {
+	
+	max-width: 100%;
+	padding: 10px;
+	margin: 0 auto 0 auto;
+}
+
+/* style the table */
+#style-table {
+	border-spacing: 5px;
+	width: 100%;
+	empty-cells: hide;
+}
+
+/* apply properties of the cell in the table according to the values below */
+td.first {
+	background-color: #34a3c5;
+	border: 5px solid #0000A0;
+	padding: 5px;
+	text-align: center;
+	width: 50px;
+	font-weight: bold;
+}
+
+td.rest {
+	background-color: #EEEEEE;
+	padding: 5px;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+}
+
+
+#tableform {
+	border-spacing: 5px;
+	width: 330px;
+	margin: 0 auto 0 auto;
+}
+
+/* apply style below to the input text */
+input[type="text"] {
+	background-color: #FFFFFF;
+	border: 2px solid #c0c0c0;
+	color: #000000;
+	text-align: center;
+	font-family: "Julius Sans One, sans-serif";
+	font-size: 15pt;	
+}
+
+/* apply the properties and values below to input submit */
+input[type="submit"] {
+	background-color: #f4f5f4;
+	border: 3px solid #c0c0c0;
+	color: #000000;
+	padding: 5px;
+	font-size: 10pt;
+	font-family: Julius Sans One, sans-serif;
+	margin-top: 5px;
+}
+
+/* apply error message to the following properties and value */
+.errorMessage, .button {
+	font-size: 12pt;
+	color: #FF0000;
+	text-align: center;
+	font-family: Julius Sans One, sans-serif;
+}
+
+
