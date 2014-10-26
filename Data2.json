@@ -1,0 +1,21 @@
+// File: ~lchhay/public_html/Data.json
+// Created on October 18, 2014 at 4:00 PM
+// Linda Chhay, lindarithchhay@gmail.com
+// 91.461 GUI Programming I
+// UMass Lowell, Fall 2014 
+// Assignment 6: Creating a Dynamic Table
+
+// define data for rows and columns with staring and ending value
+var data = {
+	"rowsVal" : {
+		
+		"minNum" : 1,
+		"maxNum" : 20
+	},
+	
+	"colsVal" : {
+		
+		"minNum" : 1,
+		"maxNum" : 20
+	}
+} ;
