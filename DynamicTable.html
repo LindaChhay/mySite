@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+
+    <!--
+	File: ~lchhay/public_html/Dynamic.html
+        Created on October 18, 2014 at 3:00 PM
+   	Linda Chhay, lindarithchhay@gmail.com
+        91.461 GUI Programming I
+	UMass Lowell, Fall 2014
+	Assignment 6: Creating an Interactive, Dynamic Table
+	I received help from Annie 
+    -->
+
+    <!-- This is the title of my web page -->
+
+    <title>Creating an Interactive, Dynamic Table</title>
+
+    <!-- links to my css files to style the page -->
+
+    <link href="css/Assignment_6.css" rel="stylesheet" type="text/css" />  
+    <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+    <!-- links my data in json file -->
+
+    <script type="text/javascript" src="Data2.json"></script>
+
+    <!-- links javaScript library jquery -->
+
+    <!-- This code is from jquery.com/download -->
+
+    <script type="text/javascript" src="jQuery.js"></script>
+
+    <!-- This code is from professor Heines website -->
+
+    <script type="text/javascript" src="formutilities.js"></script>
+
+    <!-- this script is used to execute the functions below after the page is loaded -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var rowBegin, rowEnd, colBegin, colEnd;
+            // get data from json file to create the default multiplication table
+            if (getParameter("rBegin") != null) {
+                rowBegin = parseInt(getParameter("rBegin"));
+            } else {
+                rowBegin = data.rowsVal.minNum;
+            }
+            if (getParameter("rEnd") != null) {
+                rowEnd = parseInt(getParameter("rEnd"));
+            } else {
+                rowEnd = data.rowsVal.maxNum;
+            }
+            if (getParameter("cBegin") != null) {
+                colBegin = parseInt(getParameter("cBegin"));
+            } else {
+                colBegin = data.colsVal.minNum;
+            }
+            if (getParameter("cEnd") != null) {
+                colEnd = parseInt(getParameter("cEnd"));
+            } else {
+                colEnd = data.colsVal.maxNum;
+            }
+
+            $('#rBegin').val(rowBegin);
+            $('#rEnd').val(rowEnd);
+            $('#cBegin').val(colBegin);
+            $('#cEnd').val(colEnd);
+
+            var createTable = "";
+
+            createTable += "<table id='style-table'>";
+
+            // for loop to generate the multiplication table
+            for (var row = 0; row <= (rowEnd - rowBegin + 1); row++) {
+                createTable += "<tr>";
+                for (var column = 0; column <= (colEnd - colBegin + 1); column++) {
+                    if (row == 0) {
+                        createTable += "<td class='first'>" + ((column == 0) ? "" : (column + colBegin - 1)) + "</td>";
+                    } else if (column == 0) {
+                        createTable += "<td class='first'>" + (row + rowBegin - 1) + "</td>";
+                    } else {
+                        createTable += "<td class='rest'>" + ((row + rowBegin - 1) * (column + colBegin - 1)) + "</td>";
+                    }
+
+                }
+
+                createTable += "</tr>";
+            }
+
+            createTable += "</table>";
+
+            $('#table').html(createTable);
+
+            // this used to validate data when the users input
+            $('#form').submit(function() {
+                return validateForm();
+            });
+        });
+
+        // this function is used to check the errors 
+        function validateForm() {
+            // these ideas are from Annie
+            var err1, err2, err3, err4, err5, err6;
+            // check to see if the string is empty
+            if ($('#rBegin').val() == "") {
+                err1 = true;
+                // if true print this message
+                $('#rBeginError').html("Minimum Row Value can not be empty");
+                // this check to see if the input is a number 
+            } else if (Number($('#rBegin').val()) % 1 == 0) {
+                err1 = false;
+                $('#rBeginError').html("");
+            } else {
+                err1 = true;
+                $('#rBeginError').html("Minimum Row Value must be an integer");
+            }
+            // same as the above comment but for different parameters 
+            if ($('#rEnd').val() == "") {
+                err2 = true;
+                $('#rEndError').html("Maximum Row Value can not be empty");
+            } else if (Number($('#rEnd').val()) % 1 == 0) {
+                err2 = false;
+                $('#rEndError').html("");
+            } else {
+                err2 = true;
+                $('#rEndError').html("Maximum Row Value must be an integer");
+            }
+
+            if ($('#cBegin').val() == "") {
+                err3 = true;
+                $('#cBeginError').html("Minimum Column Value can not be empty");
+            } else if (Number($('#cBegin').val()) % 1 == 0) {
+                err3 = false;
+                $('#cBeginError').html("");
+            } else {
+                err3 = true;
+                $('#cBeginError').html("Minimum Column Value must be an integer");
+            }
+
+            if ($('#cEnd').val() == "") {
+                err4 = true;
+                $('#cEndError').html("Maximum Column Value can not be empty");
+            } else if (Number($('#cEnd').val()) % 1 == 0) {
+                err4 = false;
+                $('#cEndError').html("");
+            } else {
+                err4 = true;
+                $('#cEndError').html("Maximum Column Value must be an integer");
+            }
+
+
+            // check to see if the Minimum row value is greater than
+            // Maximum row value if true display the error message below
+            if (Number($('#rBegin').val()) % 1 == 0 && Number($('#rEnd').val()) % 1 == 0) {
+                if (Number($('#rBegin').val()) > Number($('#rEnd').val())) {
+                    err5 = true;
+                    $('#rError').html("Maximum Row Value must be bigger than Minimum Row Value");
+                } else {
+                    err5 = false;
+                    $('#rError').html("");
+                }
+            }
+
+            // check to see if the Minimum column value is greater than
+            // Maximum column value if true display the error message below
+            if (Number($('#cBegin').val()) % 1 == 0 && Number($('#cEnd').val()) % 1 == 0) {
+                if (Number($('#cBegin').val()) > Number($('#cEnd').val())) {
+                    err6 = true;
+                    $('#cError').html("Maximum Column value must be bigger than Minimum Column Value");
+                } else {
+                    err6 = false;
+                    $('#cError').html("");
+                }
+            }
+            // if there are no errors returns true
+            if (err1 || err2 || err3 || err4 || err5 || err6 == true) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+  </head>
+
+  <body>
+
+    <!-- Display UMass Lowell logo, my name and the title of this assignment -->
+    <div id="UMassLogo">
+        91.461 GUI PROGRAMMING I
+        <br> Linda Chhay
+    </div>
+
+    <!-- Create these two divs with two ids so that 
+			I can style my multiplication   
+		-->
+    <div id="title">
+        <div id="content">
+
+            <!-- Style the text below according to the content id properties and values  -->
+            <h2>Assignment 6<br>Creating an Interactive, Dynamic Table</h2>
+        </div>
+    </div>
+
+    <div id="inputHolder">
+        <div id="formbody">
+            <form id="form" method="get">
+                <table id="tableform">
+                    <tr>
+                        <td>Minimum Row Value:</td>
+                        <td>
+                            <input type="text" id="rBegin" name="rBegin">
+                        </td>
+                        <td class="errorMessage" id="rBeginError"></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Row Value:</td>
+                        <td>
+                            <input type="text" id="rEnd" name="rEnd">
+                        </td>
+                        <td class="errorMessage" id="rEndError"></td>
+                        <td class="errorMessage" id="rError"></td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Column Value:</td>
+                        <td>
+                            <input type="text" id="cBegin" name="cBegin">
+                        </td>
+                        <td class="errorMessage" id="cBeginError"></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Column Value:</td>
+                        <td>
+                            <input type="text" id="cEnd" name="cEnd">
+                        </td>
+                        <td class="errorMessage" id="cEndError"></td>
+                        <td class="errorMessage" id="cError"></td>
+                    </tr>
+                    <tr>
+                        <td class="button" colspan="2">
+                            <input type="submit" id="submit" value="-->Click Here to Generate Table<--">
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Table output here! -->
+    <div id="table"></div>
+
+  </body>
+
+</html>
