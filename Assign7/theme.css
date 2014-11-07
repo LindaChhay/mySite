@@ -4,6 +4,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 /* Style the navigation bar links.  */ 
+
+/* Code is by Curran*/
 #navbar a {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
@@ -26,6 +28,8 @@
 #navbar a.active{
   border-color: gray;
 }
+
+/* Code by me */
 
 
 .img{
