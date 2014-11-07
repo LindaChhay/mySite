@@ -91,8 +91,8 @@
   // If no fragment identifier is provided,
   if(!location.hash) {
 
-    // default to #home.
-    location.hash = "#home";
+    // default to #americaneskimo.
+    location.hash = "#americaneskimo";
   }
 
   // Navigate once to the initial fragment identifier.
