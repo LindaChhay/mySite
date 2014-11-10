@@ -52,6 +52,7 @@ table, th, td {
 	height:500px;
 	border-radius: 20px;	
 	position: relative ;
+	height: 100px; 
 	}
 .breedinfo {
 	width: 100px;
