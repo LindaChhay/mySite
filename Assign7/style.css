@@ -52,8 +52,9 @@ table, th, td {
 	position: absolute ;
 	}
 .breedinfo {
+	margin-top: 100px; 
 	position: relative; 
-	background-color: blue; 
+	background-color: yellow; 
 }
 
 span.right{
