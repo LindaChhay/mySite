@@ -29,11 +29,13 @@
   border-color: gray;
 }
 
-
+#content{
+	position: relative; 
+}
 
 table {
     border-collapse: collapse;
-	position: relative;
+	/* position: relative; */
 }
 
 table, th, td {
