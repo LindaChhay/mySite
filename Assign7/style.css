@@ -50,11 +50,11 @@ table, th, td {
 div.dog{
 	width:100px; 
 	border-radius: 20px;	
-	position: relative;
+	position: absolute;
 	}
 div.breedinfo {
 	width: 100px;
-	position: relative; 
+	position: absolute; 
 	margin-top: 500px;
 }
 
