@@ -48,10 +48,10 @@ table, th, td {
 
 
 .dog{
-		width:100px; 
+	width:100px; 
 	height:500px;
 	border-radius: 20px;	
-	position: relative ;
+	position: absolute ;
 	background-color: red ; 
 	}
 .breedinfo {
