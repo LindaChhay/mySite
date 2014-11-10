@@ -30,7 +30,22 @@ table, td {
    border: 1px solid black;
    padding: 15px;
    width: 50%;
+   margin: auto;
 }
+
+body {
+	margin:50px 0px; padding:0px;
+	text-align:center;
+	}
+	
+#Content {
+	width:500px;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	border:1px dashed #333;
+	background-color:#eee;
+	}
 
 .img{
 	width:800px;
@@ -40,20 +55,4 @@ table, td {
 
 }
 
-span.right{
-	position:absolute;
-    right:10px;
-    top:65px;
-	width:450px;
-	
-}
 
-h1{
-	font-family:"arial", Times, serif;
-	font-size:25px;
-}
-
-p{
-	font-family:"arial", Times, serif;
-	font-size:12px;
-}
