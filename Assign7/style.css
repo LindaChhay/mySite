@@ -28,16 +28,17 @@
 #navbar a.active{
   border-color: gray;
 }
-td {
-    padding: 15px;
-}
+
+
 
 table {
     border-collapse: collapse;
+	position: absolute;
 }
 
 table, th, td {
     border: 1px solid black;
+	padding: 15px;
 }
 
 /* Code by me */
