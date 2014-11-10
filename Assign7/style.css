@@ -1,5 +1,10 @@
 /* The CSS theme for the Navigation Example site. */
-
+/*
+    Created on November 4, 2014 at 3:00 PM
+   	Linda Chhay, lindarithchhay@gmail.com
+        91.461 GUI Programming I
+	UMass Lowell, Fall 2014
+	Assignment 7: Creating a Single-Page Navigation Interface */
 /* Use Google Fonts. */
 @import urlhttp://fonts.googleapis.com/css?family=Julius+Sans+One);
 
@@ -26,24 +31,24 @@
 }
 
 table, td {
-   border: 1px solid black;
-   width: 50%;
-   margin: auto;
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
 }
 
 body {
-	margin:50px 0px; padding:0px;
-	text-align:center;
-	}
+  margin:50px 0px; padding:0px;
+  text-align:center;
+}
 	
 #Content {
-	width:500px;
-	margin:0px auto;
-	text-align:left;
-	padding:15px;
-	border:1px dashed #333;
-	background-color:#eee;
-	}
+  width:500px;
+  margin:0px auto;
+  text-align:left;
+  padding:15px;
+  border:1px dashed #333;
+  background-color:#eee;
+}
 
 
 
