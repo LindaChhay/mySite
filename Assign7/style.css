@@ -4,8 +4,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 /* Style the navigation bar links.  */ 
-
-/* Code is by Curran*/
 #navbar a {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
@@ -30,37 +28,16 @@
 }
 
 
-#content {
-position: absolute;
-} 
+.img{
+	width:800px;
+	height:600px;
+	border-radius: 20px;
+	
 
-table {
-    border-collapse: collapse;
-	/*  position: relative;  */
-}
-
-table, th, td {
-    border: 1px solid black;
-	padding: 15px;
-}
-
-/* Code by me */
-
-
-div.dog{
-	width:100px; 
-	border-radius: 20px;	
-	/* position: absolute; */
-	height: 100px;
-	display: inline-block;
-	}
-div.breedinfo {
-	width: 100px;
-	position: relative; 
 }
 
 span.right{
-	/* position:absolute; */
+	position:absolute;
     right:10px;
     top:65px;
 	width:450px;
