@@ -54,7 +54,7 @@ div.dog{
 	}
 div.breedinfo {
 	width: 100px;
-	position: absolute; 
+	position: relative; 
 }
 
 span.right{
