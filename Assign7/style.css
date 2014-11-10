@@ -33,7 +33,7 @@
 
 table {
     border-collapse: collapse;
-	position: absolute;
+	position: relative;
 }
 
 table, th, td {
