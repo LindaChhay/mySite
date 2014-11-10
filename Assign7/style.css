@@ -30,7 +30,9 @@
 }
 
 
-
+#content {
+position: absolute;
+}
 
 table {
     border-collapse: collapse;
@@ -46,15 +48,16 @@ table, th, td {
 
 
 .dog{
-	width:100px;
+	/* width:100px; */
 	height:500px;
 	border-radius: 20px;	
-	position: absolute ;
+	position: relative ;
+	background-color: red ; 
 	}
 .breedinfo {
 	margin-top: 100px; 
 	position: relative; 
-	background-color: yellow; 
+	background-color: black; 
 }
 
 span.right{
