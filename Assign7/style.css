@@ -30,12 +30,6 @@
 }
 
 
-#content {
-position: absolute;
-}
-
-
-
 /* Code by me */
 
 
@@ -52,8 +46,8 @@ position: absolute;
 	
 table {
     border-collapse: collapse;
-padding: 50px; 
-background-color: blue; 
+	padding: 50px; 
+	background-color: blue; 
 	}
 
 table, th, td {
