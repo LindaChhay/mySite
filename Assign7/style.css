@@ -33,6 +33,7 @@
 	position: relative; 
 }
 
+
 table {
     border-collapse: collapse;
 	/* position: relative; */
@@ -50,7 +51,8 @@ table, th, td {
 	width:100px;
 	height:500px;
 	border-radius: 20px;	
-}
+	background-color: red; 
+	}
 
 
 span.right{
