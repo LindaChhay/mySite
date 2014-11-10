@@ -51,6 +51,7 @@ div.dog{
 	width:100px; 
 	border-radius: 20px;	
 	position: absolute;
+	height: 100px;
 	}
 div.breedinfo {
 	width: 100px;
