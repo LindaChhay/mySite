@@ -47,12 +47,12 @@ table, th, td {
 /* Code by me */
 
 
-.dog{
+div.dog{
 	width:100px; 
 	border-radius: 20px;	
-	position: absolute;
+	position: relative;
 	}
-.breedinfo {
+div.breedinfo {
 	width: 100px;
 	position: relative; 
 	margin-top: 500px;
