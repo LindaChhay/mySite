@@ -45,10 +45,11 @@ table, th, td {
 
 
 .dog{
-	width:800px;
-	height:600px;
+	width:100px;
+	height:500px;
 	border-radius: 20px;	
 }
+
 
 span.right{
 	position:absolute;
