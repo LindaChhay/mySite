@@ -28,6 +28,9 @@
 #navbar a.active{
   border-color: gray;
 }
+td {
+    padding: 15px;
+}
 
 /* Code by me */
 
