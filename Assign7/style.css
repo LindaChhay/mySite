@@ -30,6 +30,20 @@
 }
 
 
+#content {
+position: absolute;
+}
+
+table {
+    border-collapse: collapse;
+	/* position: relative; */
+}
+
+table, th, td {
+    border: 1px solid black;
+	padding: 15px;
+}
+
 /* Code by me */
 
 
@@ -41,18 +55,6 @@
 .breedinfo {
 	width: 100px;
 	position: relative; 
-
-	}
-	
-table {
-    border-collapse: collapse;
-	padding: 50px; 
-	background-color: blue; 
-	}
-
-table, th, td {
-    border: 1px solid black;
-	padding: 15px;
 }
 
 span.right{
