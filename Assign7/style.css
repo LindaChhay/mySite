@@ -31,7 +31,7 @@
 
 .breedinfo {
 	position: relative; 
-	background-color: red; 
+	background-color: blue; 
 }
 
 
@@ -52,6 +52,7 @@ table, th, td {
 	width:100px;
 	height:500px;
 	border-radius: 20px;	
+	position: absolute ;
 	}
 
 
