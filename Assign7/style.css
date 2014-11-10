@@ -36,8 +36,8 @@ position: absolute;
 
 table {
     border-collapse: collapse;
-	/* position: relative; */
-}
+	width: 100%;
+	}
 
 table, th, td {
     border: 1px solid black;
@@ -53,8 +53,10 @@ table, th, td {
 	position: absolute;
 	}
 .breedinfo {
+	width: 100px;
 	position: relative; 
-}
+
+	}
 
 span.right{
 	/* position:absolute; */
